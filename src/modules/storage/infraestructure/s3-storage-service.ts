@@ -48,10 +48,12 @@ export class S3StorageService implements IStorage {
 
 	async setItem(key: string, value: Blob): Promise<void> {
 		try {
+			const arrayBuffer = await value.arrayBuffer();
+			const buffer = Buffer.from(arrayBuffer);
 			const command = new PutObjectCommand({
 				Bucket: this.bucketName,
 				Key: key,
-				Body: value,
+				Body: buffer,
 			});
 			await this.s3.send(command);
 		} catch (error) {

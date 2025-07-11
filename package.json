@@ -3,6 +3,12 @@
 	"module": "index.ts",
 	"type": "module",
 	"private": true,
+	"scripts": {
+		"test": "bun test",
+		"format": "bunx biome format --write",
+		"lint": "bunx biome lint --write",
+		"check": "bunx biome check --write --unsafe"
+	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.1",
 		"@types/bun": "latest"
