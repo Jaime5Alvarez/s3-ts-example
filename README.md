@@ -34,7 +34,7 @@ A complete example of AWS S3 integration using TypeScript, Bun, and Clean Archit
 ### Run Tests
 ```bash
 # All tests
-bun test
+bun run test
 
 ```
 
@@ -45,9 +45,6 @@ bun test
 bun run format    # Format code with Biome
 bun run lint      # Linting with Biome
 bun run check     # Complete code verification
-
-# Testing
-bun test          # Run all tests
 ```
 
 ## 🔧 Configuration
