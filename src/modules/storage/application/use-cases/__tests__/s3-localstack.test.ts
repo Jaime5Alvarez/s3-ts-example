@@ -1,4 +1,3 @@
-import { beforeEach, describe, expect, it } from "vitest";
 import {
 	CreateBucketCommand,
 	DeleteObjectCommand,
@@ -6,13 +5,14 @@ import {
 	ListObjectsV2Command,
 	S3Client,
 } from "@aws-sdk/client-s3";
-import { S3StorageService } from "@/modules/storage/infraestructure/s3-storage-service";
+import { beforeEach, describe, expect, it } from "vitest";
 import {
 	GetItemUseCase,
 	GetTempUrlUseCase,
 	RemoveItemUseCase,
 	SetItemUseCase,
 } from "@/modules/storage/application/use-cases/index";
+import { S3StorageService } from "@/modules/storage/infraestructure/s3-storage-service";
 
 const BUCKET = "test-bucket";
 const s3Client = new S3Client({
