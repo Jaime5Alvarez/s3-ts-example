@@ -12,7 +12,7 @@ import {
 	GetTempUrlUseCase,
 	RemoveItemUseCase,
 	SetItemUseCase,
-} from "../index";
+} from "@/modules/storage/application/use-cases/index";
 
 const BUCKET = "test-bucket";
 const s3Client = new S3Client({
